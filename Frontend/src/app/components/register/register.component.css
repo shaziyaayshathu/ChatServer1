@@ -1,0 +1,13 @@
+.container{
+    margin: 100px;
+    border:2px solid whitesmoke;
+    width:50%;
+    align-items: center;
+    margin-left: 25%;
+  }
+  .page-header{
+    color:rgb(106, 106, 190);
+    width: auto;
+    margin: 0;
+   
+  }

@@ -1,0 +1,29 @@
+<div class="container container-fluid col-xs-6 col-xs-offset-3">
+
+<h2 class="text-center page-header">Welcome to FriendsChat</h2>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <br>
+    <div class="form-group">
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input [class.is-invalid] = "loginForm.get('email').invalid && loginForm.get('email').touched" id="inputEmail" formControlName="email" name="email" class="form-control" placeholder="Email address" required autofocus="" type="email">
+      <small *ngIf="loginForm.get('email').errors?.pattern" class="text-danger">Please provide a valid email address ></small>
+    </div>
+  <br>
+    <div class="form-group">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input id="inputPassword" formControlName="password" name="password" class="form-control" placeholder="Password" required="" type="password">
+    </div>
+  <br>
+  
+    <div class="form-group">
+      <button [disabled]="loginForm.invalid" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      &nbsp;Don't have an account?<a [routerLink]="['/register']">Register</a>
+    </div>
+  
+    <div class="text-right">
+        
+    </div>
+    <br>
+  </form>
+  </div>
+  

@@ -1,0 +1,36 @@
+<div class="container container-fluid col-xs-6 col-xs-offset-3">
+
+    <h2 class="text-center page-header">FriendsChat SignUp</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+  <br>
+    <div class="form-group">
+      <label for="inputName" class="sr-only">Name</label>
+      <input [class.is-invalid] = "registerForm.get('name').invalid && registerForm.get('name').touched"  id="inputName" class="form-control" placeholder="Name"  autofocus="true" type="text" name="name" formControlName="name" required>
+      
+         
+    </div>
+  <br>
+    <div class="form-group">
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input [class.is-invalid] = "registerForm.get('email').invalid && registerForm.get('email').touched" id="inputEmail" class="form-control" name="email" placeholder="Email address"  autofocus="" type="email" required formControlName="email">
+      <small *ngIf="email.errors?.pattern" class="text-danger">Please provide a valid email address ></small>
+    </div>
+  <br>
+    <div class="form-group">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input [class.is-invalid] = "registerForm.get('password').invalid && registerForm.get('password').touched" id="inputPassword"  name="password" class="form-control" placeholder="Password" required type="password" formControlName="password">
+    </div>
+  <br>
+  <div class="form-group">
+    <label for="confirmPassword" class="sr-only">Password</label>
+    <input [class.is-invalid] = "registerForm.get('confirmPassword').invalid && registerForm.get('confirmPassword').touched" id="confirmPassword" name="confirmPpassword" class="form-control" placeholder="Confirm Password" required type="password" formControlName="confirmPassword">
+  </div>
+<br>
+    <div class="form-group">
+      <button [disabled]="registerForm.invalid" class="btn btn-lg btn-primary btn-block"  type="submit">Sign up</button>
+      &nbsp;&nbsp;&nbsp;<a [routerLink]="['/login']">Back to Login</a>
+    </div>
+  </form>
+  <br>
+  </div>
+  

@@ -1,0 +1,15 @@
+.container{
+    margin: 100px;
+    border:2px solid whitesmoke;
+    width:30%;
+    align-items: center;
+    margin-left: 35%;
+    padding: 15px;
+    
+  }
+  .page-header{
+    /* background-color: rgb(11, 12, 10); */
+    width: 100%;
+    margin: 0;
+    color:rgb(106, 106, 190);
+  }
